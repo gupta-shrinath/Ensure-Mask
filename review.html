@@ -13,7 +13,7 @@
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Dashboard Navbar -->
 	<link rel="stylesheet" href="css/dashboard-navbar.css">
-	<title>Table</title>
+	<title>Review</title>
 </head>
 
 <body>
@@ -62,13 +62,45 @@
 	<!-- Buttons -->
 	<div class="container d-flex justify-content-sm-center">
 		<div class="row">
-			<button type="button" class="btn btn-success btn-lg mx-3">
+			<button type="button" class="btn btn-success btn-lg mx-3" data-toggle="modal" data-target="#otpModal">
 				<i class="fa fa-check mr-2" aria-hidden="true"></i>Strike</button>
 			<button type="button" class="btn btn-danger btn-lg mx-3">
 				<i class="fa fa-times mr-2" aria-hidden="true"></i>Discard</button>
 		</div>
 	</div>
 	<!-- #Buttons -->
+
+	<!-- OTP Modal -->
+	<div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="otpModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="otpModalLabel">Send Fine</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-signin" _lpchecked="1">
+						<div class="text-center mb-4">							
+							<p>We have sent the verification code please enter it here</p>
+						</div>
+
+						<div class="form-label-group">
+							<input type="text" id="inputOtp" class="form-control" placeholder="Verification Code" required=""
+								autocomplete="off"
+								style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+							<label for="inputCaptcha"></label>
+						</div>
+
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Verify</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #OTP Modal -->
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
