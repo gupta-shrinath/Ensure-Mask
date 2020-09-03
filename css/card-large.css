@@ -1,0 +1,9 @@
+@media only screen and (min-width:590px) {
+    .card-large{
+        width: 10rem;
+    }
+
+    .image-large {
+        height: 150;
+    }
+}
