@@ -118,23 +118,22 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form class="form-signin" _lpchecked="1">
+					<form id="form-signin" class="form-signin" _lpchecked="1" method="POST">
 						<div class="text-center mb-4">
-							<img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72"
-								height="72">
+							<img class="mb-4" alt="" width="72" height="72">
 							<h1 class="h3 mb-3 font-weight-normal">Ensure Mask</h1>
 						</div>
 
 						<div class="form-label-group">
-							<input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-								required="" autofocus="" autocomplete="off"
+							<input type="email" id="inputEmail" name="email" class="form-control"
+								placeholder="Email address" required="" autofocus="" autocomplete="off"
 								style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
 							<label for="inputEmail">Email address</label>
 						</div>
 
 						<div class="form-label-group">
-							<input type="password" id="inputPassword" class="form-control" placeholder="Password"
-								required="" autocomplete="off"
+							<input type="password" id="inputPassword" name="password" class="form-control"
+								placeholder="Password" required="" autocomplete="off"
 								style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
 							<label for="inputPassword">Password</label>
 						</div>
@@ -146,6 +145,8 @@
 							<label for="inputCaptcha">Captcha</label>
 						</div>
 
+						<p class="error error--hidden text-danger"></p>
+
 						<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 					</form>
 				</div>
@@ -156,9 +157,10 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="{{ url_for('static',filename='js/jquery-3.5.1.slim.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 	<script src="{{ url_for('static',filename='js/popper.js') }}"></script>
 	<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/login.js') }}"></script>
 </body>
 
 </html>
