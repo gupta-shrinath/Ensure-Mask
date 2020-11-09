@@ -1,4 +1,4 @@
-$('#form-signin').submit(function (e) {
+$('#form-login').submit(function (e) {
     var form = $(this);
     var error = form.find(".error");
     var data = form.serialize();
@@ -17,4 +17,4 @@ $('#form-signin').submit(function (e) {
         }
     });
     e.preventDefault();
-})  
+});
