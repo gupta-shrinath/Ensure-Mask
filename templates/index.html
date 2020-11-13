@@ -1,240 +1,223 @@
-<!doctype html>
-<html lang="en">
+{% extends 'base.html'%}
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
-	<!-- Form CSS -->
-	<link rel="stylesheet" href="{{ url_for('static',filename='css/form.css') }}">
-	<!-- Font CSS -->
-	<link rel="stylesheet" href="{{ url_for('static',filename='css/font.css') }}">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="{{ url_for('static',filename='images/logo.png') }}">
-	<title>Ensure Mask</title>
-</head>
+{% block link%}
+<!-- Form CSS -->
+<link rel="stylesheet" href="{{ url_for('static',filename='css/form.css') }}">
+{% endblock%}
 
-<body>
-	<!-- Navigation Bar-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#"><img src="{{ url_for('static',filename='images/nav-logo.png') }}"
-				alt="Ensure Mask"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#about-us">ABOUT US</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#" data-toggle="modal" data-target="#loginRegisterModal">LOGIN /
-						REGISTER</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<!-- #Navigation Bar -->
-
-	<!-- Jumbotron -->
-	<div class="jumbotron">
-		<h1 class="display-4">Ensure Mask</h1>
-		<p class="lead">Face Mask Detection System.</p>
-		<p class="lead">
-			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		</p>
+{% block body%}
+<!-- Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<a class="navbar-brand" href="#"><img src="{{ url_for('static',filename='images/nav-logo.png') }}"
+			alt="Ensure Mask"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#about-us">ABOUT US</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="#" data-toggle="modal" data-target="#loginRegisterModal">LOGIN /
+					REGISTER</a>
+			</li>
+		</ul>
 	</div>
-	<!-- #Jumbotron -->
+</nav>
+<!-- #Navigation Bar -->
 
-	<!-- About Us-->
-	<div id="about-us" class="container marketing d-flex justify-content-sm-center" style="margin-bottom: 2rem;">
-		<div class="row">
-			<div class="col-lg-4 mb-4">
-				<div class="card">
-					<div class="card-body mx-auto">
-						<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
-							xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-							role="img" aria-label="Placeholder: 140x140">
-							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-								dy=".3em">140x140</text>
-						</svg>
-						<h5 class="card-title px-4">John Doe</h5>
-						<p class="card-text px-4">Front End Dec.</p>
-					</div>
-				</div>
-			</div>
+<!-- Jumbotron -->
+<div class="jumbotron">
+	<h1 class="display-4">Ensure Mask</h1>
+	<p class="lead">Face Mask Detection System.</p>
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	</p>
+</div>
+<!-- #Jumbotron -->
 
-			<div class="col-lg-4 mb-4">
-				<div class="card">
-					<div class="card-body mx-auto">
-						<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
-							xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-							role="img" aria-label="Placeholder: 140x140">
-							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-								dy=".3em">140x140</text>
-						</svg>
-						<h5 class="card-title px-4">John Doe</h5>
-						<p class="card-text px-4">Front End Dec.</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="col-lg-4 mb-4">
-				<div class="card">
-					<div class="card-body mx-auto">
-						<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
-							xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-							role="img" aria-label="Placeholder: 140x140">
-							<title>Placeholder</title>
-							<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-								dy=".3em">140x140</text>
-						</svg>
-						<h5 class="card-title px-4">John Doe</h5>
-						<p class="card-text px-4">Front End Dec.</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-	<!-- #About Us-->
-
-	<!-- Login/Register Modal -->
-	<div class="modal fade" id="loginRegisterModal" tabindex="-1" role="dialog"
-		aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="loginRegisterModalLabel">Login / Register</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-
-					<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login"
-								role="tab" aria-controls="pills-login" aria-selected="true">Login</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="pills-register-tab" data-toggle="pill" href="#pills-register"
-								role="tab" aria-controls="pills-register" aria-selected="false">Register</a>
-						</li>
-					</ul>
-
-					<div class="tab-content" id="pills-tabContent">
-						<div class="tab-pane fade show active" id="pills-login" role="tabpanel"
-							aria-labelledby="pills-login-tab">
-							<form id="form-login" class="form-signin" _lpchecked="1" method="POST">
-								<div class="text-center mb-4">
-									<img src="{{ url_for('static',filename='images/logo.png') }}" class="mb-4" alt=""
-										width="72" height="72">
-									<h1 class="h3 mb-3 font-weight-normal">Ensure Mask</h1>
-								</div>
-
-								<div class="form-label-group">
-									<input type="email" id="inputEmail" name="email" class="form-control"
-										placeholder="Email address" required="" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
-									<label for="inputEmail">Email address</label>
-								</div>
-
-								<div class="form-label-group">
-									<input type="password" id="inputPassword" name="password" class="form-control"
-										placeholder="Password" required="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-									<label for="inputPassword">Password</label>
-								</div>
-
-								<div class="form-label-group">
-									<input type="text" id="inputCaptcha" class="form-control" placeholder="Captcha"
-										required="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-									<label for="inputCaptcha">Captcha</label>
-								</div>
-
-								<p class="error error--hidden text-danger"></p>
-
-								<button class="btn btn-lg btn-primary btn-block" type="submit"> Login </button>
-							</form>
-						</div>
-
-						<div class="tab-pane fade" id="pills-register" role="tabpanel"
-							aria-labelledby="pills-register-tab">
-							<form id="form-register" class="form-signin" _lpchecked="1" method="POST">
-
-								<div class="form-label-group">
-									<input type="text" id="userName" name="userName" class="form-control"
-										placeholder="Name" required="" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
-									<label for="userName">Name</label>
-								</div>
-
-								<div class="form-label-group">
-									<input type="email" id="userEmail" name="userEmail" class="form-control"
-										placeholder="Email address" required="" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-									<label for="userEmail">Email address</label>
-								</div>
-
-								<div class="form-label-group">
-									<input type="tel" id="userMobile" name="userMobile" class="form-control"
-										placeholder="Mobile Number" required="" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-									<label for="userMobile">Mobile Number</label>
-								</div>
-
-								<div class="form-label-group">
-									<textarea id="userAddress" name="userAddress" class="form-control" required=""
-										placeholder="Address" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"></textarea>
-								</div>
-
-								<div class="form-label-group">
-									<input type="text" id="userPincode" name="userPincode" class="form-control"
-										placeholder="Pincode" required="" autofocus="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-									<label for="userPincode">Pincode</label>
-								</div>
-
-								<div class="form-label-group">
-									<input type="password" id="userPassword" name="userPassword" class="form-control"
-										placeholder="Password" required="" autocomplete="off"
-										style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
-									<label for="userPassword">Password</label>
-								</div>
-
-								<p id="registerError" class="error error--hidden text-danger"></p>
-
-								<button class="btn btn-lg btn-primary btn-block" type="submit">Register </button>
-							</form>
-						</div>
-					</div>
-
+<!-- About Us-->
+<div id="about-us" class="container marketing d-flex justify-content-sm-center" style="margin-bottom: 2rem;">
+	<div class="row">
+		<div class="col-lg-4 mb-4">
+			<div class="card">
+				<div class="card-body mx-auto">
+					<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
+						xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+						role="img" aria-label="Placeholder: 140x140">
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+							dy=".3em">140x140</text>
+					</svg>
+					<h5 class="card-title px-4">John Doe</h5>
+					<p class="card-text px-4">Front End Dec.</p>
 				</div>
 			</div>
 		</div>
+
+		<div class="col-lg-4 mb-4">
+			<div class="card">
+				<div class="card-body mx-auto">
+					<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
+						xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+						role="img" aria-label="Placeholder: 140x140">
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+							dy=".3em">140x140</text>
+					</svg>
+					<h5 class="card-title px-4">John Doe</h5>
+					<p class="card-text px-4">Front End Dec.</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-lg-4 mb-4">
+			<div class="card">
+				<div class="card-body mx-auto">
+					<svg class="bd-placeholder-img rounded-circle mb-4" width="140" height="140"
+						xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+						role="img" aria-label="Placeholder: 140x140">
+						<title>Placeholder</title>
+						<rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+							dy=".3em">140x140</text>
+					</svg>
+					<h5 class="card-title px-4">John Doe</h5>
+					<p class="card-text px-4">Front End Dec.</p>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
-	<!-- #Login/Register Modal -->
+</div>
+<!-- #About Us-->
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
-	<script src="{{ url_for('static',filename='js/popper.js') }}"></script>
-	<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
-	<!-- Load Index JS -->
-	<script src="{{ url_for('static',filename='js/index.js') }}"></script>
-</body>
+<!-- Login/Register Modal -->
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" role="dialog" aria-labelledby="loginRegisterModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="loginRegisterModalLabel">Login / Register</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
 
-</html>
+				<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login"
+							role="tab" aria-controls="pills-login" aria-selected="true">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab"
+							aria-controls="pills-register" aria-selected="false">Register</a>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+						aria-labelledby="pills-login-tab">
+						<form id="form-login" class="form-signin" _lpchecked="1" method="POST">
+							<div class="text-center mb-4">
+								<img src="{{ url_for('static',filename='images/logo.png') }}" class="mb-4" alt=""
+									width="72" height="72">
+								<h1 class="h3 mb-3 font-weight-normal">Ensure Mask</h1>
+							</div>
+
+							<div class="form-label-group">
+								<input type="email" id="inputEmail" name="email" class="form-control"
+									placeholder="Email address" required="" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+								<label for="inputEmail">Email address</label>
+							</div>
+
+							<div class="form-label-group">
+								<input type="password" id="inputPassword" name="password" class="form-control"
+									placeholder="Password" required="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+								<label for="inputPassword">Password</label>
+							</div>
+
+							<div class="form-label-group">
+								<input type="text" id="inputCaptcha" class="form-control" placeholder="Captcha"
+									required="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+								<label for="inputCaptcha">Captcha</label>
+							</div>
+
+							<p class="error error--hidden text-danger"></p>
+
+							<button class="btn btn-lg btn-primary btn-block" type="submit"> Login </button>
+						</form>
+					</div>
+
+					<div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+						<form id="form-register" class="form-signin" _lpchecked="1" method="POST">
+
+							<div class="form-label-group">
+								<input type="text" id="userName" name="userName" class="form-control" placeholder="Name"
+									required="" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+								<label for="userName">Name</label>
+							</div>
+
+							<div class="form-label-group">
+								<input type="email" id="userEmail" name="userEmail" class="form-control"
+									placeholder="Email address" required="" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+								<label for="userEmail">Email address</label>
+							</div>
+
+							<div class="form-label-group">
+								<input type="tel" id="userMobile" name="userMobile" class="form-control"
+									placeholder="Mobile Number" required="" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+								<label for="userMobile">Mobile Number</label>
+							</div>
+
+							<div class="form-label-group">
+								<textarea id="userAddress" name="userAddress" class="form-control" required=""
+									placeholder="Address" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"></textarea>
+							</div>
+
+							<div class="form-label-group">
+								<input type="text" id="userPincode" name="userPincode" class="form-control"
+									placeholder="Pincode" required="" autofocus="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+								<label for="userPincode">Pincode</label>
+							</div>
+
+							<div class="form-label-group">
+								<input type="password" id="userPassword" name="userPassword" class="form-control"
+									placeholder="Password" required="" autocomplete="off"
+									style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+								<label for="userPassword">Password</label>
+							</div>
+
+							<p id="registerError" class="error error--hidden text-danger"></p>
+
+							<button class="btn btn-lg btn-primary btn-block" type="submit">Register </button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- #Login/Register Modal -->
+{% endblock%}
+
+{% block script%}
+<!-- Load Index JS -->
+<script src="{{ url_for('static',filename='js/index.js') }}"></script>
+{% endblock%}
