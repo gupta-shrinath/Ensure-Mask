@@ -6,18 +6,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href=" {{ url_for('static',filename='css/bootstrap.css') }} ">
 	<!-- FontAwesome Icons-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Font CSS -->
+	<link rel="stylesheet" href=" {{ url_for('static',filename='css/font.css') }} ">
 	<!-- Dashboard Navbar -->
-	<link rel="stylesheet" href="css/dashboard-navbar.css">
+	<link rel="stylesheet" href=" {{ url_for('static',filename='css/dashboard-navbar.css') }} ">
 	<!-- Form CSS -->
-	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href=" {{ url_for('static',filename='css/form.css') }} ">
 	<!-- Card Desktop CSS -->
-	<link rel="stylesheet" href="css/card-large.css">
+	<link rel="stylesheet" href=" {{ url_for('static',filename='css/card-large.css') }} ">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="#">
+	<link rel="shortcut icon" href="{{ url_for('static',filename='images/logo.png') }}">
 </head>
 
 <body>
@@ -109,9 +111,9 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/popper.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
 </body>
 
 </html>
