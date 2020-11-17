@@ -44,3 +44,11 @@ def facebook():
 @app.route('/user/facebook/auth/')
 def facebook_auth():
   return User().facebook_auth()
+
+@app.route('/user/photo/')
+def photo():
+  return render_template('photo.html')
+
+@app.route('/user/photo/upload/',methods=['POST'])
+def photo_upload():
+  return User().save_photo()

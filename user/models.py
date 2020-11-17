@@ -2,8 +2,9 @@ from flask import Flask,request,redirect,jsonify,session,url_for
 from app import db
 from passlib.hash import pbkdf2_sha256
 import uuid
-from app import oauth
+from app import oauth,app
 import urllib.request
+import os
 
 class User:
     def login(self):
@@ -96,4 +97,17 @@ class User:
         save_location = 'citizens/' + user_id + '/' + provider + '.jpg'
         urllib.request.urlretrieve(image_url,save_location)
 
-    
+    def save_photo(self):
+        print(request.files)
+        face_img_one = request.files["photoOne"]
+        face_img_two = request.files["photoTwo"]
+        face_img_three = request.files["photoThree"]
+        user_id = session.get('user')["_id"]
+        save_location = app.config['USER_IMAGE_UPLOADS'] + user_id
+        face_img_one_ext = face_img_one.filename.rsplit(".", 1)[1]
+        print(face_img_one.filename,face_img_one_ext)
+        face_img_one.save( os.path.join(save_location,'face-1.' + face_img_one_ext) )
+        face_img_two_ext = face_img_two.filename.rsplit(".", 1)[1]
+        face_img_two.save( os.path.join(save_location,'face-2.' + face_img_two_ext) )
+        face_img_three_ext = face_img_three.filename.rsplit(".", 1)[1]
+        face_img_three.save( os.path.join(save_location,'face-3.' + face_img_three_ext) )

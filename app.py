@@ -7,6 +7,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET')
 app.config['SERVER_NAME'] = 'localhost:5000'
+app.config['USER_IMAGE_UPLOADS'] = "/home/droid/Projects/Web-Projects/Ensure-Mask/citizens/"
 # Database Config
 mongoClient = MongoClient('localhost',33017)
 db = mongoClient['ensure-mask']

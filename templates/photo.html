@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/bootstrap.css') }} ">
+    <!-- FontAwesome Icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Font CSS -->
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/font.css') }} ">
+    <!-- Dashboard Navbar -->
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/dashboard-navbar.css') }} ">
+    <!-- Form CSS -->
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/form.css') }} ">
+    <!-- Card Desktop CSS -->
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/card-large.css') }} ">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/logo.png') }}">
+</head>
+
+<body>
+    <!-- Suspected Offender Profile Images-->
+    <form action="/user/photo/upload/" method="POST" enctype="multipart/form-data">
+        <div class="container d-flex justify-content-center my-4">
+            <div class="row row-cols-3">
+                <div class="col">
+                    <div class="card card-large">
+                        <img id="photoOneImg" src="{{ url_for('static',filename='images/img_avatar.png') }}"
+                            class="card-img-top image-large" alt="...">
+                        <input type="file" class="d-none" id="photoOne" name="photoOne" accept="image/*">
+                        <div class=" card-body p-2">
+                            <p id="photoOneLabel" class="card-text">Select Image 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-large">
+                        <img id="photoTwoImg" src="{{ url_for('static',filename='images/img_avatar.png') }}"
+                            class="card-img-top image-large" alt="...">
+                        <input type="file" class="d-none" id="photoTwo" name="photoTwo" accept="image/*">
+                        <div class="card-body p-2">
+                            <p id="photoTwoLabel" class="card-text">Select Image 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-large">
+                        <img id="photoThreeImg" src="{{ url_for('static',filename='images/img_avatar.png') }}"
+                            class="card-img-top image-large" alt="...">
+                        <input type="file" class="d-none" id="photoThree" name="photoThree" accept="image/*">
+                        <div class="card-body p-2">
+                            <p id="photoThreeLabel" class="card-text">Select Image 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="container d-flex justify-content-center my-4">
+            <div class="row">
+                <button type="submit" class="btn btn-success btn-lg mx-3" data-toggle="modal" data-target="#otpModal">
+                    <i class="fa fa-check mr-2" aria-hidden="true"></i>Submit</button>
+            </div>
+        </div>
+        <!-- #Buttons -->
+    </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/popper.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/photo.js') }}"></script>
+</body>
+
+</html>
