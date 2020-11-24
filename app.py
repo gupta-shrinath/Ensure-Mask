@@ -3,15 +3,27 @@ from functools import wraps
 from pymongo import MongoClient
 from authlib.integrations.flask_client import OAuth
 import os
+from flask_sessionstore import Session
+from flask_session_captcha import FlaskSessionCaptcha
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET')
 app.config['SERVER_NAME'] = 'localhost:5000'
 app.config['USER_IMAGE_UPLOADS'] = "/home/droid/Projects/Web-Projects/Ensure-Mask/citizens/"
+
+
+
 # Database Config
 mongoClient = MongoClient('localhost',33017)
 db = mongoClient['ensure-mask']
-
+app.config['CAPTCHA_ENABLE'] = True
+app.config['CAPTCHA_LENGTH'] = 5
+app.config['CAPTCHA_WIDTH'] = 160
+app.config['CAPTCHA_HEIGHT'] = 60
+app.config['SESSION_MONGODB'] = mongoClient
+app.config['SESSION_TYPE'] = 'mongodb'
+Session(app)
+captcha = FlaskSessionCaptcha(app)
 # Google Oauth Config
 GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')

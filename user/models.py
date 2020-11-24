@@ -2,26 +2,29 @@ from flask import Flask,request,redirect,jsonify,session,url_for
 from app import db
 from passlib.hash import pbkdf2_sha256
 import uuid
-from app import oauth,app
+from app import oauth,app,captcha
 import urllib.request
 import os
 
 class User:
     def login(self):
         print(request.form)
-        user = db.users.find_one({
-            'email':request.form.get('email')
-        })
-        password = request.form.get('password')
-        print(user)
-        if user and pbkdf2_sha256.verify(password,user['password']):
-            print('User Exist')
-            self.start_session(user)
-            return jsonify({"status":"Success"}), 200
-        else:
-            print("User doesnot EXIST")
-            return jsonify({ "error": "Invalid login credentials" }), 401
-       
+        if captcha.validate():
+            user = db.users.find_one({
+                'email':request.form.get('email')
+            })
+            password = request.form.get('password')
+            print(user)
+            if user and pbkdf2_sha256.verify(password,user['password']):
+                print('User Exist')
+                self.start_session(user)
+                return jsonify({"status":"Success"}), 200
+            else:
+                print("User doesnot EXIST")
+                return jsonify({ "error": "Invalid login credentials" }), 401
+        else :
+            return jsonify({ "error": "Invalid Captcha." }), 401
+
     def register(self):
         user = {
             "_id" : uuid.uuid4().hex,
